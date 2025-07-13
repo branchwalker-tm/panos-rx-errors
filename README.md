@@ -1,5 +1,7 @@
 # panos-rx-errors
-A simple python script that pulls logical and hardware receive errors on CPU from the PANOS XML API
+A simple python script that pulls logical and hardware receive errors on CPU from each interface on your firewall using the PANOS XML API.
+
+> Coming Soon: Scalablity for use across multiple firewalls using Panorama
 
 ## How to use
 
@@ -8,7 +10,7 @@ A simple python script that pulls logical and hardware receive errors on CPU fro
 
 2. Add your firewall's IP address or hostname to the variable `HOST`
 
-3. Add your interface name to the `INTERFACE_NAME` variable
+3. Add your interface name to the `INTERFACE_NAME` variable. This interface will be used as a fallback if a list of interface names can't be retrieved for some reason.
 
 4. You will also need to make sure `requests` is installed
 `pip install requests`
